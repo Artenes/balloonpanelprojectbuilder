@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Criador de Projeto de Tela de Balão | Além da Imaginção Decorações</title>	
+		
+		<script type="text/javascript" src="js/balloon_project.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/eligrey/canvas-toBlob.js/master/canvas-toBlob.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/eligrey/Blob.js/master/Blob.js"></script>
+		<script type="text/javascript" src="vendor/JanOdvarko/jscolor/jscolor.js"></script>
+		<script type="text/javascript" src="vendor/99Lime/KickStart/js/kickstart.js"></script>
+		<link rel="stylesheet" href="vendor/99Lime/KickStart/css/kickstart.css" media="all" />
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	
+	<body>
+		
+		<div id="header">
+			<div id="header-main">&copy; 2015 Artenes Nogueira | <a href="http://www.alemdaimaginacaodecoracoes.com">Além da Imaginação</a></div>
+			<div id="tab-1" class="tab">
+				<ul class="icons">
+					<li onclick="addColumn()"><a href="#"><i class="fa fa-plus"></i> Adicionar coluna</a></li>
+					<li onclick="subtractColumn()"><a href="#"><i class="fa fa-minus"></i> Remover coluna</a></li>
+				</ul>
+			</div>
+			<div id="tab-2" class="tab">
+				<ul class="icons">
+					<li onclick="addRow()"><a href="#"><i class="fa fa-plus"></i> Adicionar linha</a></li>
+					<li onclick="subtractRow()"><a href="#"><i class="fa fa-minus"></i> Remover liha</a></li>
+				</ul>
+			</div>
+			<div id="tab-3" class="tab">
+				<p>Modo:</p>
+				<a href="#" onclick="changeMode(this)">Adicionar</a>
+			</div>
+			<div id="tab-4" class="tab">
+				<ul class="icons">
+					<li onclick="fillEmptySpaces()"><a href="#"><i class="fa fa-paint-brush"></i> Preencher vazios</a></li>
+					<li onclick="eraseAll()"><a href="#"><i class="fa fa-eraser"></i> Apagar tudo</a></li>
+				</ul>
+			</div>
+			<div id="tab-5" class="tab">
+				<p>Selecione uma cor:<p> <input id="colorSelector" class="color {hash:true}" value="66ff00" onchange="setSelectedHexColor(this)">
+			</div>
+			<div id="tab-6" class="tab">
+				<p>
+					<a href="#" onclick="saveToFile()"><i class="fa fa-save"></i> Salvar arquivo</button></a>
+					&nbsp
+					<a href="#" onclick="saveToImage()"><i class="fa fa-file-image-o"></i> Salvar imagem</button></a>
+				</p>
+				<span>Abrir:</span> <input type="file" id="fileinput" class="file"/>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			initialize();
+		</script>
+	</body>
+	
+</html>
