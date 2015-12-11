@@ -1,5 +1,5 @@
 # Balloon Panel Project Builder
-A javascript based application to build balloon panel projects
+A javascript based application to build balloon panel projects. [Check it out working here!](http://artenes.github.io/balloonpanelprojectbuilder/)
 
 # Dependencies 
 *(these are the folders that you need in the root)*
